@@ -1,0 +1,11 @@
+#!/bin/sh
+# add binaries to PATH if they aren't added yet
+# affix colons on either side of $PATH to simplify matching
+case ":${PATH}:" in
+    *:"$HOME/Documents/[2] Work SH/[4] PRAKIRA/PRAKIRA/backend/.uv":*)
+        ;;
+    *)
+        # Prepending path in case a system-installed binary needs to be overridden
+        export PATH="$HOME/Documents/[2] Work SH/[4] PRAKIRA/PRAKIRA/backend/.uv:$PATH"
+        ;;
+esac
